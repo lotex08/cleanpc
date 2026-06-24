@@ -21,8 +21,8 @@ def create_scan(
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
-    if user.plan != "unlimited" and user.scan_count >= user.scan_limit:
-        raise HTTPException(status_code=402, detail="Scan limit reached. Upgrade your plan.")
+    if user.scan_limit != -1 and user.scan_count >= user.scan_limit:
+        raise HTTPException(status_code=402, detail="Scan limit reached.")
 
     scan_path = data.path or os.path.expanduser("~")
 

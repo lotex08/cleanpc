@@ -74,7 +74,7 @@ export default function Landing() {
             </a>
           ))}
         </div>
-        <p className="text-sm text-gray-400">Gratis para empezar · 80 escaneos · Sin registro necesario para descargar</p>
+        <p className="text-sm text-gray-400">Gratis · Escaneos ilimitados · Sin registro necesario para descargar</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">

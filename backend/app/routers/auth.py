@@ -19,7 +19,7 @@ def register(data: UserCreate, db: Session = Depends(get_db)):
         name=data.name,
         hashed_password=hash_password(data.password),
         plan="free",
-        scan_limit=80,
+        scan_limit=-1,
     )
     db.add(user)
     db.commit()

@@ -51,7 +51,6 @@ export default function Dashboard() {
   const barData = Object.entries(categories.sizes as Record<string, number>).map(([k, v]) => ({ name: k, size: v }))
 
   const totalScansUsed = user?.scan_count || 0
-  const totalScansLimit = user?.scan_limit || 80
 
   return (
     <div className="space-y-6">
@@ -59,13 +58,8 @@ export default function Dashboard() {
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <div className="flex items-center gap-3">
           <span className="text-sm text-gray-500">
-            {totalScansUsed}/{totalScansLimit === -1 ? '∞' : totalScansLimit} escaneos
+            {totalScansUsed} escaneos
           </span>
-          {totalScansLimit !== -1 && totalScansUsed >= totalScansLimit && (
-            <Link to="/pricing" className="text-sm text-brand-600 font-medium hover:underline">
-              Upgrade
-            </Link>
-          )}
           <button
             onClick={() => setShowPath(!showPath)}
             disabled={scanning || (totalScansLimit !== -1 && totalScansUsed >= totalScansLimit)}

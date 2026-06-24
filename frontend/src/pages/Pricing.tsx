@@ -2,9 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Pricing() {
   const plans = [
-    { name: 'Free', price: 0, scans: 80, features: ['80 escaneos', 'Reporte básico', 'Duplicados'], cta: 'Comenzar' },
-    { name: 'Pro', price: 5.99, scans: 250, features: ['250 escaneos', 'Reportes detallados', 'Duplicados + grandes', 'Archivos antiguos', 'Gráficas'], cta: 'Probar Pro', popular: true },
-    { name: 'Ilimitado', price: 9.99, scans: '∞', features: ['Escaneos ilimitados', 'Todo de Pro', 'Prioridad', 'Soporte por email'], cta: 'Ilimitado' },
+    { name: 'Gratis', price: 0, scans: '∞', features: ['Escaneos ilimitados', 'Reportes detallados', 'Duplicados', 'Archivos grandes', 'Archivos antiguos', 'Gráficas'], cta: 'Comenzar' },
   ]
 
   return (
@@ -17,23 +15,21 @@ export default function Pricing() {
         </div>
       </nav>
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-2">Planes</h1>
-        <p className="text-gray-500 mb-12">Elige el plan que mejor se ajuste a tus necesidades</p>
-        <div className="grid md:grid-cols-3 gap-6">
-          {plans.map(p => (
-            <div key={p.name} className={`bg-white rounded-2xl border-2 p-8 ${p.popular ? 'border-brand-500 relative' : 'border-gray-200'}`}>
-              {p.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white px-4 py-0.5 rounded-full text-xs font-bold">POPULAR</span>}
-              <h3 className="text-lg font-bold mb-2">{p.name}</h3>
-              <p className="text-3xl font-bold mb-1">${p.price}<span className="text-sm font-normal text-gray-400">{p.price > 0 ? '/mes' : ''}</span></p>
-              <p className="text-sm text-gray-400 mb-6">{p.scans} escaneos</p>
-              <ul className="text-left space-y-2 mb-8">
-                {p.features.map(f => <li key={f} className="text-sm text-gray-600 flex items-center gap-2"><span className="text-green-500">✓</span>{f}</li>)}
-              </ul>
-              <Link to="/register" className={`block py-2 rounded-xl font-medium ${p.popular ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
-                {p.cta}
-              </Link>
-            </div>
-          ))}
+        <h1 className="text-4xl font-bold mb-2">Totalmente gratis</h1>
+        <p className="text-gray-500 mb-12">Sin límites, sin tarjeta, sin registro necesario para descargar</p>
+        <div className="max-w-sm mx-auto">
+          <div className="bg-white rounded-2xl border-2 border-brand-500 p-8 relative">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white px-4 py-0.5 rounded-full text-xs font-bold">GRATIS</span>
+            <h3 className="text-lg font-bold mb-2">{plans[0].name}</h3>
+            <p className="text-3xl font-bold mb-1">$0</p>
+            <p className="text-sm text-gray-400 mb-6">{plans[0].scans} escaneos</p>
+            <ul className="text-left space-y-2 mb-8">
+              {plans[0].features.map(f => <li key={f} className="text-sm text-gray-600 flex items-center gap-2"><span className="text-green-500">✓</span>{f}</li>)}
+            </ul>
+            <Link to="/register" className="block py-2 rounded-xl font-medium bg-brand-600 text-white hover:bg-brand-700">
+              {plans[0].cta}
+            </Link>
+          </div>
         </div>
       </section>
     </div>
