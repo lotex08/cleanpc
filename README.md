@@ -67,8 +67,11 @@ npm run dev &
 | Frontend  | React + Vite + Tailwind CSS       |
 | Backend   | FastAPI + SQLAlchemy + SQLite     |
 | Desktop   | Electron + electron-builder       |
-| Pagos     | Stripe (planes premium)           |
-| Auth      | JWT (registro local o Google)     |
+| Auth      | JWT                              |
+
+---
+
+> 🛠️ **Proyecto hecho localmente.** Si querés mejorarlo, mandá PR o abrí un issue. Cualquier cosa avisen.
 
 ---
 
@@ -85,5 +88,5 @@ Cada versión nueva se publica automáticamente via GitHub Actions.
 ---
 
 <div align="center">
-  <p>Hecho con ❤️ por lotex08</p>
+  <p>Hecho con ❤️ por lotex08 &mdash; PRs bienvenidos</p>
 </div>
