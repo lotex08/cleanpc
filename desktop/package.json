@@ -2,7 +2,11 @@
   "name": "cleanpc-desktop",
   "version": "1.0.0",
   "description": "CleanPC - Organizador de archivos para PC",
-  "author": "CleanPC",
+  "author": {
+    "name": "CleanPC",
+    "email": "contact@cleanpc.app"
+  },
+  "homepage": "https://cleanpc.onrender.com",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
