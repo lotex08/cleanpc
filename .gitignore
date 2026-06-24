@@ -3,7 +3,6 @@ venv/
 __pycache__/
 *.pyc
 *.db
-dist/
 .env
 frontend/dist/
 desktop/dist/
@@ -13,4 +12,3 @@ desktop/dist/
 *.exe
 *.dmg
 *.deb
-frontend/public/downloads/*.AppImage
