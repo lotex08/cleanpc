@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cleanpc-api
+    env: docker
+    repo: https://github.com/tuusuario/cleanpc
+    branch: main
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///./cleanpc.db
+    healthCheckPath: /api/health

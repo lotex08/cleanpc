@@ -1,0 +1,16 @@
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.db
+dist/
+.env
+frontend/dist/
+desktop/dist/
+
+# Desktop installers (use GitHub Releases instead)
+*.AppImage
+*.exe
+*.dmg
+*.deb
+frontend/public/downloads/*.AppImage

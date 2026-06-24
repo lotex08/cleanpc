@@ -1,0 +1,35 @@
+{
+  "name": "cleanpc-desktop",
+  "version": "1.0.0",
+  "description": "CleanPC - Organizador de archivos para PC",
+  "author": "CleanPC",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.cleanpc.app",
+    "productName": "CleanPC",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Utility"
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "mac": {
+      "target": ["dmg"]
+    }
+  }
+}
