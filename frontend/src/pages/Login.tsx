@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, setToken, isLoggedIn } from '../lib/api'
 import GoogleLogin from '../components/GoogleLogin'
+import GitHubLogin from '../components/GitHubLogin'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -49,7 +50,10 @@ export default function Login() {
             <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-gray-200"></div></div>
             <div className="relative flex justify-center text-sm"><span className="bg-white px-2 text-gray-400">o</span></div>
           </div>
-          <GoogleLogin />
+          <GitHubLogin />
+          <div className="mt-3">
+            <GoogleLogin />
+          </div>
           <p className="text-sm text-gray-500 text-center">
             ¿No tienes cuenta? <Link to="/register" className="text-brand-600 hover:underline">Regístrate</Link>
           </p>
