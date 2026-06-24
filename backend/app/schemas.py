@@ -59,3 +59,7 @@ class ScanDetail(ScanResponse):
 class PlanChange(BaseModel):
     plan: str
     payment_method_id: Optional[str] = None
+
+
+class GoogleAuth(BaseModel):
+    credential: str

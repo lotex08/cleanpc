@@ -16,8 +16,8 @@ function createWindow() {
     icon: path.join(__dirname, 'icon.png')
   })
 
-  const apiUrl = process.env.CLEANPC_API_URL || 'http://localhost:8000'
-  mainWindow.loadURL(apiUrl === 'http://localhost:8000' ? 'http://localhost:5173' : apiUrl)
+  const apiUrl = process.env.CLEANPC_API_URL || 'https://cleanpc.onrender.com'
+  mainWindow.loadURL(apiUrl)
   mainWindow.setMenuBarVisibility(false)
 }
 

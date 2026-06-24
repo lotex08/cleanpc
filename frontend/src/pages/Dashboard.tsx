@@ -62,7 +62,7 @@ export default function Dashboard() {
           </span>
           <button
             onClick={() => setShowPath(!showPath)}
-            disabled={scanning || (totalScansLimit !== -1 && totalScansUsed >= totalScansLimit)}
+            disabled={scanning}
             className="px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 disabled:opacity-50 text-sm font-medium"
           >
             {scanning ? 'Escaneando...' : 'Nuevo Escaneo'}

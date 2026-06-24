@@ -14,6 +14,7 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     plan = Column(String, default="free")
     stripe_customer_id = Column(String, nullable=True)
+    google_id = Column(String, nullable=True, unique=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     scan_count = Column(Integer, default=0)
     scan_limit = Column(Integer, default=-1)

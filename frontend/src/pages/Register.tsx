@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, setToken, isLoggedIn } from '../lib/api'
+import GoogleLogin from '../components/GoogleLogin'
 
 export default function Register() {
   const [name, setName] = useState('')
@@ -50,6 +51,11 @@ export default function Register() {
           <button type="submit" className="w-full py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 font-medium">
             Registrarse
           </button>
+          <div className="relative my-4">
+            <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-gray-200"></div></div>
+            <div className="relative flex justify-center text-sm"><span className="bg-white px-2 text-gray-400">o</span></div>
+          </div>
+          <GoogleLogin />
           <p className="text-sm text-gray-500 text-center">
             ¿Ya tienes cuenta? <Link to="/login" className="text-brand-600 hover:underline">Inicia sesión</Link>
           </p>

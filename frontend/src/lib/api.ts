@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API = import.meta.env.VITE_API_URL || ''
 
 function getToken(): string | null {
   return localStorage.getItem('token')
@@ -41,6 +41,8 @@ export const api = {
       request('/api/auth/register', { method: 'POST', body: JSON.stringify(data) }),
     login: (data: { email: string; password: string }) =>
       request('/api/auth/login', { method: 'POST', body: JSON.stringify(data) }),
+    google: (credential: string) =>
+      request('/api/auth/google', { method: 'POST', body: JSON.stringify({ credential }) }),
     me: () => request('/api/auth/me'),
   },
 
