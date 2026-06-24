@@ -1,0 +1,3 @@
+name = "cleanpc"
+pages_build_output_dir = "frontend/dist"
+pages_build_command = "cd frontend && npm install && npm run build"
