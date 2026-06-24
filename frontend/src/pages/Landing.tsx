@@ -9,11 +9,7 @@ const PLATFORMS: Record<string, { name: string; ext: string; icon: string }> = {
 }
 
 function downloadUrl(os: string): string {
-  const p = PLATFORMS[os]
-  const base = '/downloads'
-  const local = `${base}/cleanpc-${os}${p.ext}`
-  const gh = `https://github.com/tuusuario/cleanpc/releases/latest/download/cleanpc-${os}${p.ext}`
-  return gh
+  return `https://github.com/lotex08/cleanpc/releases/latest/download/CleanPC-1.0.0.AppImage`
 }
 
 export default function Landing() {
