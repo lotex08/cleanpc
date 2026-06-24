@@ -9,8 +9,8 @@ from app.auth import get_current_user
 router = APIRouter(prefix="/api/billing", tags=["billing"])
 
 PLANS = {
-    "free": {"price": 0, "scan_limit": 5, "name": "Free"},
-    "pro": {"price": 599, "scan_limit": 100, "name": "Pro", "stripe_price": "price_placeholder_pro"},
+    "free": {"price": 0, "scan_limit": 80, "name": "Free"},
+    "pro": {"price": 599, "scan_limit": 250, "name": "Pro", "stripe_price": "price_placeholder_pro"},
     "unlimited": {"price": 999, "scan_limit": -1, "name": "Unlimited", "stripe_price": "price_placeholder_unlimited"},
 }
 
@@ -35,7 +35,7 @@ def change_plan(
 
     if data.plan == "free":
         user.plan = "free"
-        user.scan_limit = 5
+        user.scan_limit = 80
         db.commit()
         return {"message": "Downgraded to Free"}
 

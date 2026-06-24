@@ -16,7 +16,7 @@ class User(Base):
     stripe_customer_id = Column(String, nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     scan_count = Column(Integer, default=0)
-    scan_limit = Column(Integer, default=5)
+    scan_limit = Column(Integer, default=80)
 
 
 class Scan(Base):

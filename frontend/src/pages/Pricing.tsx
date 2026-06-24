@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 
 export default function Pricing() {
   const plans = [
-    { name: 'Free', price: 0, scans: 5, features: ['5 escaneos', 'Reporte básico', 'Duplicados'], cta: 'Comenzar' },
-    { name: 'Pro', price: 5.99, scans: 100, features: ['100 escaneos', 'Reportes detallados', 'Duplicados + grandes', 'Archivos antiguos', 'Gráficas'], cta: 'Probar Pro', popular: true },
+    { name: 'Free', price: 0, scans: 80, features: ['80 escaneos', 'Reporte básico', 'Duplicados'], cta: 'Comenzar' },
+    { name: 'Pro', price: 5.99, scans: 250, features: ['250 escaneos', 'Reportes detallados', 'Duplicados + grandes', 'Archivos antiguos', 'Gráficas'], cta: 'Probar Pro', popular: true },
     { name: 'Ilimitado', price: 9.99, scans: '∞', features: ['Escaneos ilimitados', 'Todo de Pro', 'Prioridad', 'Soporte por email'], cta: 'Ilimitado' },
   ]
 

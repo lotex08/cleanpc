@@ -51,7 +51,7 @@ export default function Dashboard() {
   const barData = Object.entries(categories.sizes as Record<string, number>).map(([k, v]) => ({ name: k, size: v }))
 
   const totalScansUsed = user?.scan_count || 0
-  const totalScansLimit = user?.scan_limit || 5
+  const totalScansLimit = user?.scan_limit || 80
 
   return (
     <div className="space-y-6">
