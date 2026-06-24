@@ -1,9 +1,12 @@
+ARG VITE_GOOGLE_CLIENT_ID=""
+
 FROM node:22 AS frontend
+ARG VITE_GOOGLE_CLIENT_ID
 WORKDIR /frontend
 COPY frontend/package*.json ./
 RUN npm install
 COPY frontend/ .
-RUN npm run build
+RUN VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID} npm run build
 
 FROM python:3.12-slim
 WORKDIR /app
